@@ -6,9 +6,11 @@ import {
 // this reducer only modifies the particular slice of state living under 
 // exampleEntities, as defined in ./combinedReducer.js
 const exampleEntitiesReducer = (state = {}, action) => {
-  // freeze state in every reducer to ensure immutability (this is only shallow)
+  // freeze state in every reducer to ensure immutability 
+  // (warning: this is only shallow)
   Object.freeze(state);
-  // create a new state object in every reducer to ensure immutability (also shallow)
+  // create a new state object in every reducer to ensure immutability 
+  // (warning: also shallow)
   const newState = Object.assign({}, state);
   // extract relevant action payloads
   const { entity } = action;
